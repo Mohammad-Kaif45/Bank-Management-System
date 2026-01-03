@@ -44,6 +44,7 @@ Bank-Management-System/
 │
 ├── pom.xml                                 # Maven Dependencies (MySQL Connector)
 └── README.md                               # Project Documentation
+```
 ## 🛠️ Tech Stack & Concepts Used
 
 This project goes beyond basic coding to implement industry-standard software engineering practices:
