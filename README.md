@@ -64,14 +64,15 @@ CREATE TABLE transactions (
     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (account_number) REFERENCES users(account_number)
 );
-
+```
 Step 2: Configure Database Connection
-Navigate to src/main/java/com/bank/util/DBConnection.java.
+Navigate to ```sql src/main/java/com/bank/util/DBConnection.java. ```
 
 Update your MySQL credentials:
 
-private static final String USER = "root";
-private static final String PASSWORD = "YOUR_MYSQL_PASSWORD";
+```sql private static final String USER = "root";```
+
+```sql private static final String PASSWORD = "YOUR_MYSQL_PASSWORD";```
 
 Step 3: Run the Application
 Open the project in IntelliJ IDEA.
