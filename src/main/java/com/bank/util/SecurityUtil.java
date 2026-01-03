@@ -1,8 +1,6 @@
 package com.bank.util;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
 public class SecurityUtil {
     public static String hashPassword(String password) {
         try {
@@ -15,6 +13,8 @@ public class SecurityUtil {
             return sb.toString();
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException("Error hashing password", e);
+        } finally {
+            System.out.println("File executes successfully...");
         }
     }
 }
