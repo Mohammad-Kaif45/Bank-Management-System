@@ -15,6 +15,35 @@ A robust, console-based banking simulation built with **Java** and **MySQL**. Th
 * **Mini-Statement:** View the last 10 transactions with timestamps.
 * **Loan Eligibility:** Smart algorithm that checks balance and transaction history to determine loan approval.
 
+## 📂 Project Structure
+
+The project is architected using the **DAO (Data Access Object)** pattern to ensure a clean separation between the Business Logic, Data Access, and User Interface layers.
+
+```text
+Bank-Management-System/
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── bank/
+│   │               ├── dao/
+│   │               │   └── BankManager.java    # Core Banking Logic (CRUD, Transactions, Loan Algorithm)
+│   │               │
+│   │               ├── main/
+│   │               │   └── BankingApp.java     # Application Entry Point (Console UI & Input Validation)
+│   │               │
+│   │               ├── model/
+│   │               │   └── User.java           # POJO Class (Represents the User Entity)
+│   │               │
+│   │               └── util/
+│   │                   ├── DBConnection.java   # Database Connectivity (Singleton Design Pattern)
+│   │                   └── SecurityUtil.java   # Security Utility (SHA-256 Password Hashing)
+│   │
+│   └── resources/
+│       └── database_schema.sql             # SQL Scripts for initializing the Database
+│
+├── pom.xml                                 # Maven Dependencies (MySQL Connector)
+└── README.md                               # Project Documentation
 ## 🛠️ Tech Stack & Concepts Used
 
 This project goes beyond basic coding to implement industry-standard software engineering practices:
