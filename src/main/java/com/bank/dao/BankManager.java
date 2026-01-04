@@ -8,10 +8,10 @@ import java.sql.*;
 public class BankManager {
 
     // 1. REGISTER USER (Now with Account Type)
-    // Inside com.bank.dao.BankManager.java
+    
 
     public void registerUser(String name, String email, String password, String accountType, String dob, String address) {
-        // Updated SQL to include dob and address
+        
         String sql = "INSERT INTO users (full_name, email, password_hash, balance, account_type, dob, address) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DBConnection.getConnection();
@@ -22,8 +22,8 @@ public class BankManager {
             pstmt.setString(3, SecurityUtil.hashPassword(password));
             pstmt.setDouble(4, 0.0);
             pstmt.setString(5, accountType);
-            pstmt.setString(6, dob);     // New Field
-            pstmt.setString(7, address); // New Field
+            pstmt.setString(6, dob);     
+            pstmt.setString(7, address); 
 
             int rows = pstmt.executeUpdate();
 
@@ -97,7 +97,7 @@ public class BankManager {
     }
 
     // 5. TRANSFER MONEY
-    // 5. TRANSFER MONEY (Fixed)
+    
     public void transferMoney(long senderAcc, long receiverAcc, double amount) {
         // Check 1: Sender Balance
         if (getBalance(senderAcc) < amount) {
