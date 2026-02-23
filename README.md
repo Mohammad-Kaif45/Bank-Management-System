@@ -3,7 +3,7 @@
 # 🏦 Java Console Banking System 
 
 A robust, console-based banking simulation built with **Java** and **MySQL**. This application replicates core banking functionalities including secure user authentication, fund transfers, transaction history, and loan eligibility checks, engineered with a focus on data integrity and security.
-
+ 
 ## 🚀 Key Features  
 
 * **User Onboarding:** Secure registration capturing KYC details (Name, DOB, Address) and Account Type (Savings/Current).
