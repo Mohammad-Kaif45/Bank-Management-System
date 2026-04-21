@@ -4,7 +4,7 @@ public class User {
     private long accountNumber;
     private String fullName;
     private String email;
-    private double balance;
+    private double balance; 
 
     // Constructors, Getters, and Setters
     public User(long accountNumber, String fullName, String email, double balance) {
